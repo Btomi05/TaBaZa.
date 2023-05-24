@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(92, 3, 143);
+}
+
+#next-question {
+    display: none;
+}
+
+#result_holder {
+    display: none;
+}

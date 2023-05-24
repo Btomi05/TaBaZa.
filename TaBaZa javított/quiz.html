@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Quiz</a>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="card mx-auto" style="width: 30rem;">
+          <div class="card-body">
+            <div id="question_holder">
+              <h2 class="text-center"><span id="question_counter">0</span>. kérdés</h2>
+              <h5>Kérdés:</h5>
+              <p id="question_content">#kérdés#</p>
+              <button type="button" class="btn btn-outline-dark" style="width: 100%;"
+                onclick="answerToQuestion('A', 'answer_a')" id="answer_a"><span id="text_of_answer_a">A
+                  válasz</span></button>
+              <button type="button" class="btn btn-outline-dark" style="width: 100%;"
+                onclick="answerToQuestion('B','answer_b')" id="answer_b"><span id="text_of_answer_b">B
+                  válasz</span></button>
+            </div>
+            <div id="result_holder">
+              <h2 class="text-center">Véget ért a kvíz!</h2>
+              <p class="text-center">Lássuk, mennyire figyeltél!</p>
+              <h3 class="text-center"><span id="result"></span></h3>
+              <p id="result-feedback" class="text-center"></p>
+            </div>
+            <div style="margin-top:20px;" class="text-center">
+              <button type="button" class="btn btn-outline-success" onclick="nextQuestion()"
+                id="next-question">Következő kérdés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="quiz_main.js"></script>
+  <script>
+    initPage();
+  </script>
+</body>
+
+</html>
